@@ -15,7 +15,6 @@ const sql = {
         const results = await promisePool.query(`
         select * from employee
         `)
-
         return results;
     },
 };
