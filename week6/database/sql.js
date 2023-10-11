@@ -7,7 +7,7 @@ const pool = mysql.createPool({
     port: 3306,
     user: 'root',
     password: '111111',
-    database: 'week4',
+    database: 'week6',
 });
 
 const promisePool = pool.promise();
@@ -31,6 +31,11 @@ export const selectSql = {
     },
     getStudent: async () => {
         const sql = `select * from Student`;
+        const [result] = await promisePool.query(sql);
+        return result;
+    },
+    getClass: async () => {
+        const sql = `select * from Class`;
         const [result] = await promisePool.query(sql);
         return result;
     },

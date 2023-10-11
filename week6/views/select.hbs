@@ -62,3 +62,44 @@
 <h2>{{title4}}</h2>
 
 <table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone number</td>
+        <td>Major</td>
+        <td>Department Id</td>
+    </tr>
+    {{#each Student}}
+    <tr>
+        <td>{{"student_id"}}</td>
+        <td>{{Name}}</td>
+        <td>{{Email}}</td>
+        <td>{{Phone_number}}</td>
+        <td>{{Major}}</td>
+        <td>{{department_id}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<!--Class-->
+<h2>{{title5}}</h2>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Professor</td>
+        <td>Number Of Participants</td>
+        <td>Department Id</td>
+    </tr>
+    {{#each Class}}
+    <tr>
+        <td>{{"class_id"}}</td>
+        <td>{{Name}}</td>
+        <td>{{Professor}}</td>
+        <td>{{NumberOfParticipants}}</td>
+        <td>{{department_id}}</td>
+    </tr>
+    {{/each}}
+</table>
